@@ -171,7 +171,7 @@ class StaticmanAPI {
   }
 
   start (callback) {
-    this.instance = this.server.listen(config.get('port'), () => {
+    this.instance = this.server.listen(config.get('port'), '127.0.0.1', () => {
       if (typeof callback === 'function') {
         callback(config.get('port'))
       }
